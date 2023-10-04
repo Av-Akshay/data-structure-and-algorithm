@@ -1,4 +1,4 @@
-// video 30 :- maximum occurring cgaracter in string
+// video 30 :- maximum occurring cgaracter in string=========================================================
 
 // let str = "priyansh chauhan";
 // let obj = {};
@@ -15,19 +15,34 @@
 // console.log(obj);
 // console.log(maxkey);
 
-let str = "vishaldogriyl";
-let obj = {};
-maxkey = "";
+// let str = "petter";
+// let obj = {};
+// maxkey = "";
 
-for (let i = 0; i < str.length; i++) {
-  let key = str[i];
-  if (!obj[key]) {
-    obj[key] = 0;
-  }
-  obj[key]++;
-  if (maxkey == "" || obj[key] >= obj[maxkey]) {
-    maxkey = key;
-  }
-}
-console.log(obj);
-console.log(maxkey);
+// for (let i = 0; i < str.length; i++) {
+//   let key = str[i];
+//   if (!obj[key]) {
+//     obj[key] = 0;
+//   }
+//   obj[key]++;
+//   if (maxkey == "" || obj[key] >= obj[maxkey]) {
+//     maxkey = key;
+//   }
+// }
+// console.log(obj);
+// console.log(maxkey);
+
+// video 31:- Object (hash table) =======================================================================
+
+let obj = {
+  name: "akshay chauhan",
+  age: 23,
+  email: "user@gmail.com",
+};
+// for (item in obj) {
+//   console.log(item); // key
+//   console.log(obj[item]); // values
+// }
+
+// [console.log(Object.keys(obj))]; // array of keys
+[console.log(Object.values(obj))]; // array of values
