@@ -66,10 +66,35 @@ map.clear();
 // this data tyep is simillar to object
 
 // video:- 33 Set data struture in javascript===============================================================================
+
 // In this type of data structure duplicate data can't exist.
 // It simler to the array data type.
 
 const setArr = new Set(["akshay", "chauhan", "akshay"]);
 
 // console.log(setArr);
-console.log(setArr.has("Akshay"));
+// console.log(setArr.has("kshay"));
+
+// video :- 34 Linked List In javaScript====================================================================================
+
+class List {
+  constructor(data) {
+    this.head = {
+      value: data,
+      next: null,
+    };
+    this.tail = this.head;
+  }
+  appendNode(nodeData) {
+    let newNode = {
+      value: nodeData,
+      next: null,
+    };
+    this.tail.next = newNode;
+    this.tail = newNode;
+  }
+}
+let list = new List(200);
+list.appendNode(300);
+list.appendNode(400);
+console.log(list);
