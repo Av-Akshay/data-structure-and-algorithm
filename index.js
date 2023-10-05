@@ -48,18 +48,28 @@
 // [console.log(Object.values(obj))]; // array of values
 
 // video :- 32 Map data structure in javascript============================================================
+// In this type of data structure duplicate data can't exist.
 
-let map = new Map([[true, "vishal"]]);
+// let map1 = new Map([[true, "vishal"]]);
 // or
-console.log(map);
+// console.log(map1);=3
 
-// const map = new Map();
-// map.set("name", "akshay");
-// map.set("age", 23);
-// map.set({ name: "saksham" }, "chauhan");
+const map = new Map();
+map.set("name", "akshay");
+map.set("age", 23);
+map.set({ name: "saksham" }, "chauhan");
 // console.log(map.get("name"));
 // console.log(map.has("name"));
-// map.clear();
+map.clear();
 // console.log(map);
 
 // this data tyep is simillar to object
+
+// video:- 33 Set data struture in javascript===============================================================================
+// In this type of data structure duplicate data can't exist.
+// It simler to the array data type.
+
+const setArr = new Set(["akshay", "chauhan", "akshay"]);
+
+// console.log(setArr);
+console.log(setArr.has("Akshay"));
