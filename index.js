@@ -84,12 +84,14 @@ class List {
       next: null,
     };
     this.tail = this.head;
+    this.size = 1;
   }
   appendNode(nodeData) {
     let newNode = {
       value: nodeData,
       next: null,
     };
+    this.size++;
     this.tail.next = newNode;
     this.tail = newNode;
   }
@@ -97,4 +99,40 @@ class List {
 let list = new List(200);
 list.appendNode(300);
 list.appendNode(400);
-console.log(list);
+// console.log(list);
+
+// video:- 35 traversing Linked list============================================================================================
+
+class List1 {
+  constructor(data) {
+    this.head = {
+      value: data,
+      next: null,
+    };
+    this.tail = this.head;
+    this.size = 1;
+  }
+  appendNode(nodeData) {
+    let newNode = {
+      value: nodeData,
+      next: null,
+    };
+    this.size++;
+    this.tail.next = newNode;
+    this.tail = newNode;
+  }
+  traversing() {
+    let counter = 0;
+    let currentNode = this.head;
+    while (counter < this.size) {
+      console.log(currentNode);
+      currentNode = currentNode.next;
+      counter++;
+    }
+  }
+}
+let list1 = new List1(200);
+list1.appendNode(300);
+list1.appendNode(400);
+list1.traversing();
+// console.log(list1);
