@@ -268,5 +268,57 @@ list4.appendNode(300);
 list4.appendNode(400);
 list4.appendNode(500);
 list4.appendNode(600);
-list4.insert(3, 700);
-console.log(list4);
+// list4.insert(3, 700);
+// console.log(list4);
+
+// next video search node in linked list ==================================================================================================
+
+// if we have to many nodes (example 1000 nodes) if we want to know what is the value in 10th node
+// and what is the value in 20th node this approach is searching based on element.
+
+// if we want to know which node having value 500 or which node elemet having value 1000
+// this approach is searching based on value.
+
+class List5 {
+  constructor(value) {
+    this.head = {
+      value,
+      next: null,
+    };
+    this.tail = this.head;
+    this.size = 1;
+  }
+  appendNode(val) {
+    let newNode = {
+      value: val,
+      next: null,
+    };
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.size++;
+  }
+  searching(itemVal) {
+    let currentNode = this.head;
+    let valElem = "Dos't exist";
+    let loop = true;
+    while (loop) {
+      if (loop && currentNode.value == itemVal) {
+        loop = false;
+        valElem = currentNode;
+      }
+      currentNode = currentNode.next;
+      loop = !!currentNode;
+      // console.log(!!currentNode);
+    }
+    console.log(valElem);
+  }
+}
+
+let list5 = new List5(100);
+list5.appendNode(200);
+list5.appendNode(300);
+list5.appendNode(400);
+list5.appendNode(500);
+list5.appendNode(600);
+list5.searching(600);
+console.log(list5);
