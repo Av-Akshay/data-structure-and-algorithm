@@ -125,7 +125,7 @@ class List1 {
     let counter = 0;
     let currentNode = this.head;
     while (counter < this.size) {
-      console.log(currentNode);
+      // console.log(currentNode);
       currentNode = currentNode.next;
       counter++;
     }
@@ -136,3 +136,137 @@ list1.appendNode(300);
 list1.appendNode(400);
 list1.traversing();
 // console.log(list1);
+class List2 {
+  constructor(data) {
+    this.head = {
+      value: data,
+      next: null,
+    };
+    this.tail = this.head;
+    this.size = 1;
+  }
+  appendNode(nodeData) {
+    let newNode = {
+      value: nodeData,
+      next: null,
+    };
+    this.size++;
+    this.tail.next = newNode;
+    this.tail = newNode;
+  }
+  traversing() {
+    let counter = 0;
+    let currentNode = this.head;
+    while (counter < this.size) {
+      if (currentNode.value == 300) {
+        currentNode.value = "akshay";
+      }
+      // console.log(currentNode.value);
+      currentNode = currentNode.next;
+      counter++;
+    }
+  }
+}
+let list2 = new List2(200);
+list2.appendNode(300);
+list2.appendNode(400);
+list2.traversing();
+// console.log(list2);
+
+// video:- 36 Delete node link list============================================================================================
+
+class List3 {
+  constructor(data) {
+    this.head = {
+      value: data,
+      next: null,
+    };
+    this.tail = this.head;
+    this.size = 1;
+  }
+  appendNode(nodeData) {
+    let newNode = {
+      value: nodeData,
+      next: null,
+    };
+    this.size++;
+    this.tail.next = newNode;
+    this.tail = newNode;
+  }
+  traversing() {
+    let counter = 0;
+    let currentNode = this.head;
+    while (counter < this.size) {
+      if (currentNode.value == 300) {
+        currentNode.value = "akshay";
+      }
+      // console.log(currentNode.value);
+      currentNode = currentNode.next;
+      counter++;
+    }
+  }
+  delet(index) {
+    let counter = 0;
+    let lead = this.head;
+    // console.log(lead);
+    while (counter < index - 1) {
+      lead = lead.next;
+      counter++;
+    }
+    let nextNode = lead.next.next;
+    lead.next = nextNode;
+  }
+}
+let list3 = new List3(200);
+list3.appendNode(300);
+list3.appendNode(400);
+list3.appendNode(500);
+list3.appendNode(600);
+list3.appendNode(700);
+list3.appendNode(800);
+list3.delet(3);
+// console.log(list3);
+
+// next video:- insert node in linked list=====================================================================================================
+class List4 {
+  constructor(data) {
+    this.head = {
+      value: data,
+      next: null,
+    };
+
+    this.tail = this.head;
+    this.size = 0;
+  }
+  appendNode(val) {
+    let newNode = {
+      value: val,
+      next: null,
+    };
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.size++;
+  }
+  insert(index, value) {
+    let counter = 1;
+    let currentNode = this.head;
+    while (counter < index) {
+      currentNode = currentNode.next;
+      counter++;
+    }
+    let nextNode = currentNode.next;
+    currentNode.next = {
+      value,
+      next: nextNode,
+    };
+  }
+}
+
+let list4 = new List4(100);
+list4.appendNode(200);
+list4.appendNode(300);
+list4.appendNode(400);
+list4.appendNode(500);
+list4.appendNode(600);
+list4.insert(3, 700);
+console.log(list4);
